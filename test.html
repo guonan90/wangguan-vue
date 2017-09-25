@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			table{
+				width: 1000px;
+				margin: 50px auto;
+				text-align: center;
+			}
+			th{
+				height: 50px;
+			}
+			td{
+				height: 35px;
+			}
+			p{
+				width: 1200px;
+				margin: auto;
+				line-height: 30px;
+				color: #333;
+			}
+		</style>
+	</head>
+	<body>
+		<table border="1" cellspacing="0" cellpadding="">
+			<thead>
+				<tr>
+					<th>城市</th>
+					<th>学校</th>
+					<th>日期</th>
+					<th>时间</th>
+					<th>场地</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				
+			</tbody>
+		</table>
+		<div class="des">
+		</div>
+		
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var arr = [
+				{  
+					city:'沈阳',
+					school:'辽宁大学',
+					date:'9月12日',
+					time:'15:30-17:30',
+					place:'博雅楼425室(蒲河校区)'
+				},
+				{
+					city:'大连',
+					school:'东北财经大学',
+					date:'9月14日',
+					time:'15:30-17:30',
+					place:'梅园A座'
+				},
+				{
+					city:'北京',
+					school:'中华女子学院',
+					date:'9月19日',
+					time:'18:00-20:00',
+					place:'主楼428'
+				},
+				{
+					city:'杭州',
+					school:'浙江工业大学',
+					date:'10月12日',
+					time:'19:00-21:00',
+					place:'待定'
+				}
+			]
+			var html ='';
+//			for (var i = 0 ; i <arr.length; i++) {
+//				html += '<tr>'+
+//							'<td>'+arr[i].city+'</td>'+
+//							'<td>'+arr[i].school+'</td>'+
+//							'<td>'+arr[i].date+'</td>'+
+//							'<td>'+arr[i].time+'</td>'+
+//							'<td>'+arr[i].place+'</td>'+
+//						'</tr>'
+//			}
+//			$('tbody').html(html)
+
+			$.each(arr,function(index,item){
+				html += '<tr>'+
+							'<td>'+item.city+'</td>'+
+							'<td>'+item.school+'</td>'+
+							'<td>'+item.date+'</td>'+
+							'<td>'+item.time+'</td>'+
+							'<td>'+item.place+'</td>'+
+						'</tr>'
+			})
+			$('tbody').html(html)
+			
+			
+			var des = [
+					"1、长沙高新技术产业开发区创建于1988年10月。1991年3月经国务院批准为首批27个国家级高新区之一。经过多年发展，长沙高新区经济社会发展取得显著成绩，综合经济实力在全国156个国家级高新区中排名13位，创新能力跻身全国前10强。",
+					"2、2014年底，以长沙高新区为龙头的长株潭国家自主创新示范区正式获批，标志着长沙高新区进入国家级高新区的“第一方阵”。目前，长沙高新区已成为国家级湘江新区、长株潭自主创新示范区和长株潭两型社会示范区的核心园区。",
+					"3、2017年，长沙高新区按照“稳住、进好、调优”的总要求，围绕“奋力争先晋位，挺进全国十强”的总目标，大力实施“转型升级、创新驱动、开放崛起”三大战略，努力打造“动力高新、实力高新、活力高新和魅力高新”，朝着率先打造“五千亿级”园区目标奋力起航。"
+				]
+			
+			var str = '';
+			for (var j = 0; j < des.length; j++) {
+				str += '<p>'+des[j]+'</p>'
+			}
+			
+			$('.des').html(str)
+		})
+		
+	</script>
+</html>

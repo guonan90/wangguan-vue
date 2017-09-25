@@ -1,0 +1,32 @@
+[
+    {
+        "path":"/digitalbox**/1",
+        "app":"digitalbox1",
+        "url":"http://127.0.0.2:88881",
+        "urls":"是1",
+        "reset":"是1",
+        "filtration":"--------1",
+        "open":"是1",
+        "id":"1"
+    },
+    {
+        "path":"/digitalbox**/2",
+        "app":"digitalbox2",
+        "url":"http://127.0.0.2:88882",
+        "urls":"是2",
+        "reset":"是2",
+        "filtration":"--------2",
+        "open":"是2",
+        "id":"2"
+    },
+    {
+        "path":"/digitalbox**/3",
+        "app":"digitalbox3",
+        "url":"http://127.0.0.2:88883",
+        "urls":"是3",
+        "reset":"是3",
+        "filtration":"--------3",
+        "open":"是3",
+        "id":"3"
+    }
+]
